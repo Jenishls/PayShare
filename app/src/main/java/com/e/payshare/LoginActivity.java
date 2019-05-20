@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity{
 
     private EditText etUsername, etPassword;
     private Button btnLogin;
@@ -24,26 +24,23 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnLogin = findViewById(R.id.btnLogin);
         linkRegister = findViewById(R.id.linkRegister);
 
-        btnLogin.setOnClickListener(this);
-        linkRegister.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        Authentication auth = new Authentication();
-        auth.setUsername(etUsername.getText().toString());
-        auth.setPassword(etPassword.getText().toString());
-        if(v.getId() == R.id.btnLogin) {
-            if(auth.Login()){
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(login()){
+                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    startActivity(intent);
+                }
             }
-        }
-
-        else if(v.getId() ==R.id.linkRegister){
-            Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
-            startActivity(intent);
-        }
+        });
     }
 
+
+    public boolean login(){
+        if( etUsername.getText().toString().equals("admin") && etPassword.getText().toString().equals("admin"))
+            return true;
+        else
+            return false;
+    }
 
 }
