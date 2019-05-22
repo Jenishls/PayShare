@@ -1,6 +1,5 @@
 package adapter;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,9 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.e.payshare.ItemData;
 import com.e.payshare.R;
-import java.util.List;
-
-import model.Feed;
 
 public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder>{
     private ItemData[] itemsData;
