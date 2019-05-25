@@ -27,7 +27,4 @@
         android:layout_height="wrap_content"
         android:text="Save Group"
         />
-
-
-
 </LinearLayout>
