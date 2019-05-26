@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".group.AddActivity"></activity>
+        <activity android:name=".group.AddGroupActivity"></activity>
         <activity android:name=".GroupListActivity" />
         <activity
             android:name=".DashboardActivity"

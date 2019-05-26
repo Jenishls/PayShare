@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
+import com.e.payshare.group.AddGroupActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,17 +53,6 @@ private RecyclerView recyclerView;
             }
         });
 
-//        List<Group> groupList = new ArrayList<>();
-//        groupList.add(new Group("Group 1"));
-//        groupList.add(new Group("Group 2"));
-//        groupList.add(new Group("Group 3"));
-//        groupList.add(new Group("Group 4"));
-//        groupList.add(new Group("Group 5"));
-//
-//        GroupAdapter groupAdapter = new GroupAdapter(this,groupList);
-//        recyclerView.setAdapter(groupAdapter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +60,7 @@ private RecyclerView recyclerView;
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
-                Intent intent  = new Intent(DashboardActivity.this, MainActivity.class);
+                Intent intent  = new Intent(DashboardActivity.this, AddGroupActivity.class);
                 startActivity(intent);
             }
         });
